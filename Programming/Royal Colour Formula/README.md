@@ -67,7 +67,7 @@ for r, g, b in frank:
 ```
 <img src="media/iter1.png" alt="Output of the first attempt">
 
-We are left with some odd numbers. This is due to the fact that the values that exceed 255 are deducted by 255. An even number deducted by an odd number will result in an odd number. So we add a check that if the result of (r + b - g) is an odd number, we add 255 to it.
+We are left with some fractional numbers. I surmise that this has something to do with the mod 255 (or more specifically speaking, a minus 255). An even number subtracted by an odd number results in an odd number. So I added a check that if the result of (r + b - g) is an odd number, we add 255 to it.
 
 Second attempt:
 ```python
@@ -84,7 +84,7 @@ for r, g, b in frank:
 ```
 <img src="media/iter2.png" alt="Output of the second attempt">
 
-We are getting closer. We have negative numbers for some reason. Let's add 255 the numbers that are negative.
+We now have negative numbers. Let's add 255 to them.
 
 Third attempt:
 ```python
