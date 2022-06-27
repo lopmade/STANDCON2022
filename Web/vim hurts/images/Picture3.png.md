@@ -1,1 +1,0 @@
-![[Picture3.png]]
